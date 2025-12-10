@@ -17,11 +17,13 @@ export PATH=$PATH:/usr/local/go/bin
 Создание ssh-key для работы с github:    
 ssh-keygen -t ed25519  
 eval `ssh-agent`  
+ssh-add ~/.ssh/id_ed25519  
 touch ~/.ssh/config  
 `Host github.com  
     HostName github.com  
     User git  
     IdentityFile ~/.ssh/id_ed25519  
     IdentitiesOnly yes  
-    AddKeysToAgent yes  
-    UseKeychain yes`  
+    AddKeysToAgent yes`
+Добавляем ключ в аккаунт  
+ssh -T git@github.com

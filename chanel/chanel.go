@@ -17,3 +17,24 @@ func main() {
 	close(ch)
 }
 
+//Способ паралельного ожидания сигналов из разных кналов:
+
+func someFunc(chVal chan int, chErr chan error) {
+	var i int
+	chVal <- i
+
+}
+
+func twoChanListen() {
+	chErr := make(chan error)
+	chVal := make(chan int)
+
+	go someFunc()
+
+	switch {
+	case <-chErr:
+		panic(err)
+	case <-chVal:
+		fmt.Println(chVal)
+	}
+}

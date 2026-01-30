@@ -1,9 +1,10 @@
 package main
 
 import (
-	"project/module/Protocol/TCP/client"
+	client "project/memo/Protocol/TCP/client"
 )
 
 func main() {
 	client.Start()
+	server.start()
 }

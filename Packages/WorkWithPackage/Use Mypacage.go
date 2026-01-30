@@ -1,9 +1,9 @@
 package main
 
 import (
+	"Project/memo/Packages/WorkWithPackage/OtherTry"
+	"Project/memo/Packages/WorkWithPackage/mypackage"
 	"fmt"
-	"project/module/Packages/WorkWithPackage/OtherTry"
-	"project/module/Packages/WorkWithPackage/mypackage"
 )
 
 func main() {
